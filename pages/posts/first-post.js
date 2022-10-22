@@ -1,12 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function FirstPost() {
     return <>
         <Head>
             <title>First Post</title>
         </Head>
+        <Script
+            src="https://connect.facebook.net/en_US/sdk.js"
+            strategy="lazyOnload"
+            onLoad={() =>
+                console.log(`script loaded correctly, window.FB has been populated`)
+            }
+        />
         <main>
             <h1 className="title">
                 First Post
@@ -17,7 +25,7 @@ export default function FirstPost() {
                 width={200}
                 alt="Rocket League dominus"
             />
-            <p><Link href="../">Back to home</Link></p>
+            <h2><Link href="/">Back to home</Link></h2>
         </main>
     </>;
 }
