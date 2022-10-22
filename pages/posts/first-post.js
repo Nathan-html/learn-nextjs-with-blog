@@ -1,8 +1,12 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function FirstPost() {
-    return <div className="container">
+    return <>
+        <Head>
+            <title>First Post</title>
+        </Head>
         <main>
             <h1 className="title">
                 First Post
@@ -15,5 +19,5 @@ export default function FirstPost() {
             />
             <p><Link href="../">Back to home</Link></p>
         </main>
-    </div>;
+    </>;
 }
