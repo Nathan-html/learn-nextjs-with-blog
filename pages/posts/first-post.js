@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import styles from './first-post.module.css'
 
 export default function FirstPost() {
     return <>
@@ -16,7 +17,7 @@ export default function FirstPost() {
             }
         />
         <main>
-            <h1 className="title">
+            <h1 className={styles.title}>
                 First Post
             </h1>
             <Image
